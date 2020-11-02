@@ -1,0 +1,30 @@
+{% extends 'model.html' %}
+
+{% block title %}
+    <title>-- DJANGO -1- </title>
+{% endblock %}
+
+{% block content %}
+<div class="container-xl">
+    <section>
+        <div>
+            <h4>Django</h4>
+            <hr>
+        </div>
+    </section>
+    <section>
+        <div>
+            {% for post in post %}
+            <p>{{ post.title }}</p>
+            <p>{{ post.abstract }}</p>
+            <button>
+                <a href="/djangoView/?id={{ post.id }}">
+                    Visualizar
+                </a>
+            </button>
+            <hr>
+            {% endfor %}
+        </div>
+    </section>
+</div>
+{% endblock %}

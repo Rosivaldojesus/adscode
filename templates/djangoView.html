@@ -1,0 +1,21 @@
+{% extends 'model.html' %}
+{% block title %}
+    <title>{{ post.title }}</title>
+{% endblock %}
+
+{% block content %}
+<div class="container-xl">
+    <section>
+        <div>
+            <h4>{{ post.title }}</h4>
+            <hr>
+        </div>
+    </section>
+    <section>
+        <div>
+            <p>{{ post.title }}</p>
+            <p>{{ post.content | safe }}</p>
+        </div>
+    </section>
+</div>
+{% endblock %}
