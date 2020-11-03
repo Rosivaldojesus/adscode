@@ -55,11 +55,27 @@ class ArticleJavaScrit(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
+        db_table = 'tbArticleJavaScripts'
+        verbose_name_plural = 'Articles JavaScripts'
+
+    def __str__(self):
+        return "{} - {}".format(self.id, self.title, self.created_at)
+
+
+class ArticleJavaScript(models.Model):
+    title = models.CharField(max_length=255, blank=True, null=True, verbose_name="Título")
+    abstract = models.CharField(max_length=255, blank=True, null=True, verbose_name="Subtítulo")
+    content = models.TextField(blank=True, null=True, verbose_name="Texto")
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
         db_table = 'tbArticleJavaScript'
         verbose_name_plural = 'Articles JavaScript'
 
     def __str__(self):
         return "{} - {}".format(self.id, self.title, self.created_at)
+
+
 
 
 

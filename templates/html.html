@@ -1,4 +1,30 @@
 {% extends 'model.html' %}
+
 {% block title %}
-    <title>ADSCode - Programação </title>
+    <title>-- HTML - HyperText Markup Language -- </title>
+{% endblock %}
+
+{% block content %}
+<div class="container-xl">
+    <section>
+        <div>
+            <h4>HTML - HyperText Markup Language</h4>
+            <hr>
+        </div>
+    </section>
+    <section>
+        <div>
+            {% for post in post %}
+            <p>{{ post.title }}</p>
+            <p>{{ post.abstract }}</p>
+            <button>
+                <a href="/htmlView/?id={{ post.id }}">
+                    Visualizar
+                </a>
+            </button>
+            <hr>
+            {% endfor %}
+        </div>
+    </section>
+</div>
 {% endblock %}
