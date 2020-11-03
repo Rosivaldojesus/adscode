@@ -36,7 +36,7 @@ class ArticleDjango(models.Model):
 class ArticleHeroku(models.Model):
     title = models.CharField(max_length=255, blank=True, null=True, verbose_name="Título")
     abstract = models.CharField(max_length=255, blank=True, null=True, verbose_name="Subtítulo")
-    content = models.TextField(blank=True, null=True, verbose_name="Texto")
+    content = RichTextField(blank=True, null=True, verbose_name="Texto")
     created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
@@ -51,7 +51,7 @@ class ArticleHeroku(models.Model):
 class ArticleJavaScrit(models.Model):
     title = models.CharField(max_length=255, blank=True, null=True, verbose_name="Título")
     abstract = models.CharField(max_length=255, blank=True, null=True, verbose_name="Subtítulo")
-    content = models.TextField(blank=True, null=True, verbose_name="Texto")
+    content = RichTextField(blank=True, null=True, verbose_name="Texto")
     created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
@@ -65,7 +65,7 @@ class ArticleJavaScrit(models.Model):
 class ArticleJavaScript(models.Model):
     title = models.CharField(max_length=255, blank=True, null=True, verbose_name="Título")
     abstract = models.CharField(max_length=255, blank=True, null=True, verbose_name="Subtítulo")
-    content = models.TextField(blank=True, null=True, verbose_name="Texto")
+    content = RichTextField(blank=True, null=True, verbose_name="Texto")
     created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
@@ -82,7 +82,7 @@ class ArticleJavaScript(models.Model):
 class ArticleHtml(models.Model):
     title = models.CharField(max_length=255, blank=True, null=True, verbose_name="Título")
     abstract = models.CharField(max_length=255, blank=True, null=True, verbose_name="Subtítulo")
-    content = models.TextField(blank=True, null=True, verbose_name="Texto")
+    content = RichTextField(blank=True, null=True, verbose_name="Texto")
     created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
@@ -97,7 +97,7 @@ class ArticleHtml(models.Model):
 class ArticleLibrary(models.Model):
     title = models.CharField(max_length=255, blank=True, null=True, verbose_name="Título")
     abstract = models.CharField(max_length=255, blank=True, null=True, verbose_name="Subtítulo")
-    content = models.TextField(blank=True, null=True, verbose_name="Texto")
+    content = RichTextField(blank=True, null=True, verbose_name="Texto")
     created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
@@ -113,7 +113,7 @@ class ArticleLibrary(models.Model):
 class ArticlePython(models.Model):
     title = models.CharField(max_length=255, blank=True, null=True, verbose_name="Título")
     abstract = models.CharField(max_length=255, blank=True, null=True, verbose_name="Subtítulo")
-    content = models.TextField(blank=True, null=True, verbose_name="Texto")
+    content = RichTextField(blank=True, null=True, verbose_name="Texto")
     created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
