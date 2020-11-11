@@ -1,6 +1,5 @@
 from django.shortcuts import render
-from .models import ArticleDjango, ArticleCss, ArticleHeroku, ArticleJavaScript
-from .models import ArticleHtml, ArticleLibrary, ArticlePython
+from .models import *
 
 # Create your views here.
 def index(request):
