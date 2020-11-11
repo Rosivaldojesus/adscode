@@ -121,16 +121,8 @@ class ArticlePython(models.Model):
     def __str__(self):
         return "{} - {}".format(self.id, self.title, self.created_at)
 
-class DesafiosPython(models.Model):
-    title = models.CharField(max_length=255, blank=True, null=True, verbose_name="Título")
-    desafioPython = RichTextField(blank=True, null=True, verbose_name="Desafio")
-    respostaPython = RichTextField(blank=True, null=True, verbose_name="Resposta")
-    class Meta:
-        db_table = 'tbDesafiosPython'
-        verbose_name_plural = 'Desafios Python'
 
-    def __str__(self):
-        return "{} - {}".format(self.id, self.desafioPython, self.respostaPython)
+
 
 
 
