@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import ArticleCss, ArticleDjango, ArticleHeroku, ArticleJavaScript, ArticleHtml, ArticleLibrary, ArticlePython
+from .models import *
 
 
 
@@ -12,3 +12,4 @@ admin.site.register(ArticleJavaScript)
 admin.site.register(ArticleHtml)
 admin.site.register(ArticleLibrary)
 admin.site.register(ArticlePython)
+admin.site.register(DesafiosPython)

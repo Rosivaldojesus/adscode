@@ -134,4 +134,11 @@ class ArticlePython(models.Model):
 
 class DesafiosPython(models.Model):
     desafioPython = RichTextField(blank=True, null=True, verbose_name="Desafio")
-    respostaPython = RichTextField(blank=True, null=True, verbose_name="Desafio")
+    respostaPython = RichTextField(blank=True, null=True, verbose_name="Resposta")
+
+    class Meta:
+        db_table = 'tbDesafiosPython'
+        verbose_name_plural = 'Desafios Python'
+
+    def __str__(self):
+        return "{} - {}".format(self.id, self.desafioPython, self.respostaPython)
