@@ -123,8 +123,18 @@ class ArticlePython(models.Model):
 
 
 
+class DesafiosPython(models.Model):
+    number = models.DecimalField(max_digits=3, decimal_places=0)
+    title = models.CharField(max_length=255, blank=True, null=True, verbose_name="Título")
+    desafio = RichTextField(blank=True, null=True, verbose_name="Desafio")
+    resposta = RichTextField(blank=True, null=True, verbose_name="Resposta")
 
+    class Meta:
+        db_table = 'tbDesafiosPython'
+        verbose_name_plural = 'Desafios Python'
 
+    def __str__(self):
+        return "{} - {}".format(self.id, self.title, self.desafio)
 
 
 
