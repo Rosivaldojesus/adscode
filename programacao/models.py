@@ -133,3 +133,14 @@ class DesafiosPython(models.Model):
         return "{} - {}".format(self.id, self.desafioPython, self.respostaPython)
 
 
+class DesafiosPy(models.Model):
+    title = models.CharField(max_length=255, blank=True, null=True, verbose_name="Título")
+    desafioPython = RichTextField(blank=True, null=True, verbose_name="Desafio")
+    respostaPython = RichTextField(blank=True, null=True, verbose_name="Resposta")
+    class Meta:
+        db_table = 'tbDesafiosPy'
+        verbose_name_plural = 'Desafios Python'
+
+    def __str__(self):
+        return "{} - {}".format(self.id, self.desafioPython, self.respostaPython)
+
