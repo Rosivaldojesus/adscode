@@ -115,7 +115,6 @@ class ArticlePython(models.Model):
     abstract = models.CharField(max_length=255, blank=True, null=True, verbose_name="Subtítulo")
     content = RichTextField(blank=True, null=True, verbose_name="Texto")
     CAPITULOS= (
-
         ("default", "default"),
         ("Estrutura de Dados", "Estrutura de Dados"),
         ("Estrutura de Controle", "Estrutura de Controle"),
