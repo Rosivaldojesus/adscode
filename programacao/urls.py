@@ -1,13 +1,7 @@
 from django.urls import path
 
-from .views import index
-from .views import Css, CssView
-from .views import Django, DjangoView
-from .views import Heroku, HerokuView
-from .views import Javascript, JavascriptView
-from .views import Html, HtmlView
-from .views import Library, LibraryView
-from .views import Python, PythonView
+from .views import *
+
 
 
 urlpatterns = [

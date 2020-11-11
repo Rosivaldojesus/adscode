@@ -114,6 +114,15 @@ class ArticlePython(models.Model):
     title = models.CharField(max_length=255, blank=True, null=True, verbose_name="Título")
     abstract = models.CharField(max_length=255, blank=True, null=True, verbose_name="Subtítulo")
     content = RichTextField(blank=True, null=True, verbose_name="Texto")
+    CAPITULOS= (
+
+        ("default", "default"),
+        ("Estrutura de Dados", "Estrutura de Dados"),
+        ("Estrutura de Controle", "Estrutura de Controle"),
+        ("Exceções", "Exceções"),
+        ("Orientação a Objetos", "Orientação a Objetos"),
+    )
+    capitulos = models.CharField(max_length=50, choices=CAPITULOS)
     created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
@@ -122,3 +131,7 @@ class ArticlePython(models.Model):
 
     def __str__(self):
         return "{} - {}".format(self.id, self.title, self.created_at)
+
+class DesafiosPython(models.Model):
+    desafioPython = RichTextField(blank=True, null=True, verbose_name="Desafio")
+    respostaPython = RichTextField(blank=True, null=True, verbose_name="Desafio")
