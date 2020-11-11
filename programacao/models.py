@@ -122,11 +122,10 @@ class ArticlePython(models.Model):
         return "{} - {}".format(self.id, self.title, self.created_at)
 
 
-
 class DesafiosPython(models.Model):
     title = models.CharField(max_length=255, blank=True, null=True, verbose_name="Título")
-    desafio = RichTextField(blank=True, null=True, verbose_name="Desafio")
-    resposta = RichTextField(blank=True, null=True, verbose_name="Resposta")
+    desafio = models.CharField(max_length=255, blank=True, null=True, verbose_name="Subtítulo")
+    resposta = RichTextField(blank=True, null=True, verbose_name="Texto")
 
     class Meta:
         db_table = 'tbDesafiosPython'
@@ -134,6 +133,10 @@ class DesafiosPython(models.Model):
 
     def __str__(self):
         return "{} - {}".format(self.id, self.title, self.desafio)
+
+
+
+
 
 
 
