@@ -122,6 +122,7 @@ class ArticlePython(models.Model):
         return "{} - {}".format(self.id, self.title, self.created_at)
 
 class DesafiosPython(models.Model):
+    number = models.FloatField()
     title = models.CharField(max_length=255, blank=True, null=True, verbose_name="Título")
     desafio = RichTextField(blank=True, null=True, verbose_name="Desafio")
     resposta = RichTextField(blank=True, null=True, verbose_name="Resposta")
