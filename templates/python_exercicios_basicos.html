@@ -8,13 +8,13 @@
 
 <div class="container-xl">
     <section>
-        <h4>Desafios</h4>
+        <h4>Exerícios básicos de Python</h4>
          <div>
                 {% for ex in exercicio %}
                 <h5>Exercício: {{ ex.numero }}</h5>
-                <p>{{ ex.exercicio }}</p>
+                <p>{{ ex.exercicio | safe}}</p>
                 <button>
-                    <a href="/pythonView/?id={{ post.id }}">
+                    <a href="/PythonExerciciosBasicosView/?id={{ ex.id }}">
                         Visualizar
                     </a>
                 </button>

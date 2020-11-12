@@ -92,3 +92,9 @@ def PythonView(request):
 def PythonExerciciosBasicos(request):
     exercicio = ExerciciosBasicosPy.objects.all()
     return render(request, 'python_exercicios_basicos.html',{'exercicio': exercicio})
+
+def PythonExerciciosBasicosView(request):
+    exercicio = request.GET.get('id')
+    if exercicio:
+        exercicio = ExerciciosBasicosPy.objects.get(id=exercicio)
+    return render(request, 'python_exercicios_basicos_view.html',{'exercicio': exercicio})

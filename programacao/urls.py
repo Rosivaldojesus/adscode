@@ -24,5 +24,6 @@ urlpatterns = [
 
     path('python/', Python),
     path('pythonView/', PythonView),
-    path('PythonExerciciosBasicos/', PythonExerciciosBasicos)
+    path('PythonExerciciosBasicos/', PythonExerciciosBasicos),
+    path('PythonExerciciosBasicosView/', PythonExerciciosBasicosView),
 ]
