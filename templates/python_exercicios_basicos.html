@@ -1,0 +1,26 @@
+{% extends 'model.html' %}
+
+{% block title %}
+    <title>-- Pythons -- </title>
+{% endblock %}
+
+{% block content %}
+
+<div class="container-xl">
+    <section>
+        <h4>Desafios</h4>
+         <div>
+                {% for ex in exercicio %}
+                <h5>Exercício: {{ ex.numero }}</h5>
+                <p>{{ ex.exercicio }}</p>
+                <button>
+                    <a href="/pythonView/?id={{ post.id }}">
+                        Visualizar
+                    </a>
+                </button>
+                <hr>
+                {% endfor %}
+         </div>
+    </section>
+</div>
+{% endblock %}

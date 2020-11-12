@@ -88,3 +88,7 @@ def PythonView(request):
     if post:
         post = ArticlePython.objects.get(id=post)
     return render(request, 'pythonView.html', {'post': post})
+
+def PythonExerciciosBasicos(request):
+    exercicio = ExerciciosBasicosPy.objects.all()
+    return render(request, 'python_exercicios_basicos.html',{'exercicio': exercicio})

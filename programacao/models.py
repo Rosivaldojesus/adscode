@@ -124,15 +124,15 @@ class ArticlePython(models.Model):
 
 class ExerciciosBasicosPy(models.Model):
     numero = models.DecimalField(max_digits=8, decimal_places=0, default=0)
-    exericio = RichTextField(blank=True, null=True, verbose_name="Exercício")
+    exercicio = RichTextField(blank=True, null=True, verbose_name="Exercício")
     resposta = RichTextField(blank=True, null=True, verbose_name="Resposta")
 
     class Meta:
         db_table = "ExerciciosBasicosPy"
-        verbose_name_plural = 'Exericios Basicos PY'
+        verbose_name_plural = 'Exercicios Basicos PY'
 
     def __str__(self):
-        return "{} - {}".format(self.id, self.numero, self.exericio)
+        return "{} - {}".format(self.numero, self.exercicio)
 
 
 
