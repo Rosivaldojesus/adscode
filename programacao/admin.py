@@ -12,6 +12,7 @@ admin.site.register(ArticleJavaScript)
 admin.site.register(ArticleHtml)
 admin.site.register(ArticleLibrary)
 admin.site.register(ArticlePython)
+admin.site.register(ExerciciosBasicosPy)
 
 
 
