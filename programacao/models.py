@@ -122,18 +122,17 @@ class ArticlePython(models.Model):
         return "{} - {}".format(self.id, self.title, self.created_at)
 
 
-class DesafiosPython(models.Model):
-    title = models.CharField(max_length=255, blank=True, null=True, verbose_name="Título")
-    desafio = models.CharField(max_length=255, blank=True, null=True, verbose_name="Subtítulo")
-    resposta = RichTextField(blank=True, null=True, verbose_name="Texto")
+class ExerciciosBasicosPy(models.Model):
+    numero = models.DecimalField(max_digits=8, decimal_places=0, default=0)
+    exericio = RichTextField(blank=True, null=True, verbose_name="Exercício")
+    resposta = RichTextField(blank=True, null=True, verbose_name="Resposta")
 
     class Meta:
-        db_table = 'tbDesafiosPython'
-        verbose_name_plural = 'Desafios Python'
+        db_table = "ExerciciosBasicosPy"
+        verbose_name_plural = 'Exericios Basicos PY'
 
     def __str__(self):
-        return "{} - {}".format(self.id, self.title, self.desafio)
-
+        return "{} - {}".format(self.id, self.numero, self.exericio)
 
 
 
